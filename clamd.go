@@ -29,7 +29,7 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"log"
+//	"log"
 	"net/url"
 	"strings"
 )
@@ -261,7 +261,7 @@ func (c *Clamd) ScanStream(r io.Reader) (chan string, error) {
 
 		nr, err := r.Read(buf)
 		if nr > 0 {
-			log.Printf("Error %v, %v,  %v", buf[0:nr], nr, err)
+//			log.Printf("Error %v, %v,  %v", buf[0:nr], nr, err)
 			conn.sendChunk(buf[0:nr])
 		}
 
